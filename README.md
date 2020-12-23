@@ -43,6 +43,7 @@ Please review outputs, especially gcode (as I am not an expert on any of the fil
             -b         Process Front and Bottom Layer.
             -c         Do not cleanup after program exits.
             -p<pxmm>   Change pixels per mm (default 30).
+			-s		   Only draw single contours 
 ```
 
 ### Files
