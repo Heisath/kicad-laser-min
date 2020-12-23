@@ -1269,7 +1269,7 @@ void trace_drillholes(unsigned int pxmm, string sLayer, bool mark_vias)
 
         } else if ( ipad[li][HOLEX] < ipad[li][HOLEY])
         {
-            hy = -(ipad[li][HOLEY]- ipad[li][HOLEX])/(2.0*pxmm);
+            hy = -(float)(ipad[li][HOLEY]- ipad[li][HOLEX])/(2.0*pxmm);
             hx = (1.0*ipad[li][HOLEX])/(2*pxmm);
 
             angle = 180-1.0*ipadseg[li][ANGLE];
@@ -1291,7 +1291,7 @@ void trace_drillholes(unsigned int pxmm, string sLayer, bool mark_vias)
 
             if ((mark_vias == true) & ( ipad[li][PADTYPE] == K_VIA))
             {
-                hy = -(ipad[li][HOLEY]- ipad[li][HOLEX]+1)/(2.0*pxmm);
+                hy = -(float)(ipad[li][HOLEY]- ipad[li][HOLEX]+1)/(2.0*pxmm);
                 hx = (1.0*ipad[li][HOLEX]+1)/(2*pxmm);
 
                 rotate_angle(x2-hx, yy-hy, x2, yy, angle, &x11, &y11);
