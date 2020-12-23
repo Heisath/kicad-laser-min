@@ -7,8 +7,6 @@
     cpp_image.png - Colour track expansion
 */
 
-//#define DEBUG
-
 #define _USE_MATH_DEFINES
 
 #include <opencv2/core.hpp>
@@ -408,7 +406,7 @@ int readviapad(String filename,String sLayer)
                 #endif
 
                 unsigned first,last=0,padtype,second;
-                float centrex,centrey,width,height,holex,holey,cx,cy,rratio,angle2;
+                float centrex,centrey,width,height,holex,holey,cx,cy,rratio = 0.0f,angle2;
                 string token,shape_drill;
 
                 while (last<255)

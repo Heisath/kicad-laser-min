@@ -1,3 +1,8 @@
 .vs/
 kicadpcb2contour/x64/
+map.png
+cpp_image.png
+trace.png
+*.gcode
+
 
