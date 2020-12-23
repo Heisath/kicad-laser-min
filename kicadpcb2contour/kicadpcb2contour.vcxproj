@@ -88,6 +88,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="kicadpcb2contour.cpp" />
+    <ClCompile Include="thinning.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="opencv_world450.dll">
@@ -103,6 +104,10 @@
     <CopyFileToFolders Include="expander_board.kicad_pcb">
       <FileType>Document</FileType>
     </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="precomp.hpp" />
+    <ClInclude Include="ximgproc.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

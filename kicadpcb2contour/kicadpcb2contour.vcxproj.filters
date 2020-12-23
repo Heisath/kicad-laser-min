@@ -18,6 +18,9 @@
     <ClCompile Include="kicadpcb2contour.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="thinning.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="opencv_world450d.dll">
@@ -29,5 +32,13 @@
     <CopyFileToFolders Include="opencv_world450.dll">
       <Filter>Resource Files</Filter>
     </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="precomp.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ximgproc.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
