@@ -34,7 +34,7 @@ unsigned int pixels_per_mm = 30; // Tunable parameter resolves pixels per mm. La
 
 typedef cv::Point3_<uint8_t> Pixel;
 
-bool color_pool[31*31*31];
+bool color_pool[32*32*32];
 
 #define RECT 1
 #define ELLIPSE 2
@@ -837,7 +837,7 @@ void colorize_tracks(Mat &image)
     int channels = image.channels();
 
     //Init color pool
-    for (int r=1; r<31*31*31; r++)
+    for (int r=1; r<sizeof(color_pool); r++)
         color_pool[r]=true;
 
     for (int r=1; r<32; r++)
