@@ -1,4 +1,4 @@
 .vs/
 kicadpcb2contour/x64/
 output/
-
+kicadpcb2contour/*.dll
