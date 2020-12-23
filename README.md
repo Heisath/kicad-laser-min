@@ -8,6 +8,7 @@ This is isolation routing for PCBs.
 This fork has been adapted to compile easily on Windows using Visual Studio. All neccessary OpenCV libraries have been included so building should be as easy as possible.
 The usage etc. explained below should still be valid, but might need to be changed a bit to accomodate powershell/cmd.
 
+To be able to build and then directly start the application you will need the opencv dlls. They are included in kicadpcb2contour/opencv_dlls.7z but will need to be extracted to the containing folder. 
 
 ### Operation
 The application uses a line Voronoi segmentation technique on the BW image of one layer of PCB. The Voronoi algorithm has been implemented in C++
