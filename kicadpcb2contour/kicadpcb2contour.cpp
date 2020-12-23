@@ -9,15 +9,17 @@
 
 //#define DEBUG
 
+#define _USE_MATH_DEFINES
+
 #include <opencv2/core.hpp>
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgproc.hpp>
-#include <opencv2/ximgproc.hpp>
+//#include <opencv2/ximgproc.hpp> TODO: Figure out how to re-add ximgproc
 
 #include <iostream>
 #include <fstream>
-#include <unistd.h>
+//#include <unistd.h>
 #include <list>
 #include <algorithm>
 #include <sstream>
@@ -25,7 +27,7 @@
 #include <math.h>
 
 using namespace cv;
-using namespace cv::ximgproc;
+//using namespace cv::ximgproc; TODO: Figure out how to re-add ximgproc
 using namespace std;
 
 unsigned int pixels_per_mm = 30; // Tunable parameter resolves pixels per mm. Larger value slower calculation. Lower values coarser contours.
@@ -1052,7 +1054,7 @@ int getcontourexpansion(String sLayer, bool cppdirect)
     erode( detected_edges, detected_edges, element3 );
     bitwise_xor(detected_edges,worktrace,detected_edges);
     
-    thinning(detected_edges, detected_edges, 0 );
+    // thinning(detected_edges, detected_edges, 0 ); TODO: Figure out how to re-add ximgproc
 
     imwrite( "trace.png", detected_edges );
     
