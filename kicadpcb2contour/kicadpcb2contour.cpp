@@ -1082,7 +1082,7 @@ int getcontourexpansion(String sLayer, bool cppdirect, bool double_contours)
 		erode(detected_edges, detected_edges, element3);
 	}
 	
-	//thinning(detected_edges, detected_edges, 0 ); //TODO: Re-enable thinning
+	thinning(detected_edges, detected_edges, 0 );
 
 	imwrite("trace.png", detected_edges);
 
@@ -1138,7 +1138,6 @@ int tracecontourexpansion(unsigned int pxmm, string sLayer)
 		Point j, k;
 
 		// remove First Contour by tracing lines on Input Image
-
 		for (Point i : contours[0])
 		{
 			if (first)
@@ -1203,7 +1202,7 @@ int tracecontourexpansion(unsigned int pxmm, string sLayer)
 
 
 		// if no more contours then stop
-		if (contours.size() < 2) found = false;
+		if (contours.size() <= 2) found = false;
 		cnt--;
 		if (cnt == 0) found = false;
 	}
